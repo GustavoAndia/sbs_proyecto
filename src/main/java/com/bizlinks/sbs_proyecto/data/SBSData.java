@@ -39,7 +39,7 @@ public class SBSData extends Weekday {
 
     private String url = "https://www.sbs.gob.pe/app/stats/seriesH-tipo_cambio_moneda_excel.asp?fecha1=%s&fecha2=%s&moneda=02&cierre=";
 
-    private String url2 = "https://www.sbs.gob.pe/app/stats/seriesH-tipo_cambio_moneda_excel.asp?fecha1=07/05/2024&fecha2=07/05/2024&moneda=02&cierre=";
+    //private String url2 = "https://www.sbs.gob.pe/app/stats/seriesH-tipo_cambio_moneda_excel.asp?fecha1=07/05/2024&fecha2=07/05/2024&moneda=02&cierre=";
 
     public SBSData() {
         super();
@@ -74,7 +74,7 @@ public class SBSData extends Weekday {
             sslContext.init(null, trustAllCertificates, new java.security.SecureRandom());
             HttpsURLConnection.setDefaultSSLSocketFactory(sslContext.getSocketFactory());
 
-            URL url = new URL(url2);
+            URL url = new URL(getUrlFormatted());
             connection = (HttpsURLConnection) url.openConnection();
 //            connection.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537");
             connection.setRequestMethod("GET");
