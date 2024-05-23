@@ -17,8 +17,8 @@ public class Sbs_proyecto {
         //VisualizationTabulate tabulate = new VisualizationTabulate();
 
         Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.HOUR_OF_DAY, 17); // 24 horas
-        calendar.set(Calendar.MINUTE,39);
+        calendar.set(Calendar.HOUR_OF_DAY, 23); // 24 horas
+        calendar.set(Calendar.MINUTE,0);
         calendar.set(Calendar.SECOND, 0);
 
         Date time = calendar.getTime();
